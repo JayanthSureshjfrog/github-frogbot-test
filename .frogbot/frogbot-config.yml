@@ -1,8 +1,8 @@
 - params:
     git:
-      repoName: devops-frogbot-examples
+      repoName: github-frogbot-test
       branches:
-        - frogbot-python
+        - main
     scan:
       projects:
         - workingDirs:
