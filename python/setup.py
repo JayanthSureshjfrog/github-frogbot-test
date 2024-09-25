@@ -12,5 +12,5 @@ setup(
     description="This package is for numpy amd requests",
     author="",
     author_email="tp.email@example.com",
-    url="https://github.com/<RHC_GIT_ORG>/devops-frogbot-examples/tree/frogbot-python/python",
+    url="https://github.com/JayanthSureshjfrog/devops-frogbot-examples/tree/frogbot-python/python",
 )
