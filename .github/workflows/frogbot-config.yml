@@ -1,11 +1,10 @@
-
 - params:
     git:
       repoName: github-frogbot-test
       branches:
-        - master
-        
+        - main
     scan:
       projects:
-         pipRequirementsFile: "./python/requirements.txt"
-
+        - workingDirs:
+            - ./python
+          pipRequirementsFile: requirements.txt
