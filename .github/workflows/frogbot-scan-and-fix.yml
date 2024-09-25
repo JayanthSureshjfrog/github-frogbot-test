@@ -37,7 +37,7 @@ jobs:
           # 1. The project uses npm, yarn 2, NuGet or .NET to download its dependencies
           # 2. The `installCommand` variable isn't set in your frogbot-config.yml file.
           # The command that installs the project dependencies (e.g "npm i", "nuget restore" or "dotnet restore")
-          JF_INSTALL_DEPS_CMD: "python -m pip install pipenv"
+          JF_INSTALL_DEPS_CMD: "python3 -m pip3 install pipenv"
 
           # [Mandatory]
           # JFrog platform URL
