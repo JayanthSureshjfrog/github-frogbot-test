@@ -19,7 +19,7 @@ permissions:
   security-events: write
   id-token: write
 jobs:
-  create-fix-pull-requests:
+  scan-repository:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
