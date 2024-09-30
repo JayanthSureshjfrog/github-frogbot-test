@@ -78,9 +78,3 @@ jobs:
           # need to set this value, if it is set in the frogbot-config.yml file.
           # JF_DEPS_REPO: ""
           JF_PROJECT: 'umac-project'
-      - name: Configuring PATH variable
-        run: |
-          echo "$HOME/.local/bin" >> $PATH
-
-      - name: Installing dependency
-        run: pip install pipenv
