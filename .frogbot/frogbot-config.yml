@@ -1,10 +1,7 @@
 - params:
     git:
-      repoName: github-frogbot-test
       branches:
         - main
+      aggregateFixes: true
     scan:
-      projects:
-        - workingDirs:
-            - ./python
-          pipRequirementsFile: requirements.txt
+      failOnSecurityIssues: true
