@@ -23,11 +23,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ‘3.9’
-          cache: 'pip' # caching pip dependencies
-      - run: pip install pipenv
+      # - uses: actions/setup-python@v5
+      #   with:
+      #     python-version: ‘3.9’
+      #     cache: 'pip' # caching pip dependencies
+      # - run: pip install pipenv
 
       #  IMPORTANT:
       #  1. See the following link for information about the tools that need to be installed for Frogbot to work - https://github.com/jfrog/frogbot/tree/master/docs/templates/github-actions/scan-and-fix
@@ -37,8 +37,8 @@ jobs:
       #   run: |
       #     echo "$HOME/.local/bin" >> $PATH
 
-      # - name: Installing dependency
-      #   run: pip install pipenv
+      - name: Installing dependency
+        run: pip install pipenv
         
       - uses: jfrog/frogbot@v2
         with:
