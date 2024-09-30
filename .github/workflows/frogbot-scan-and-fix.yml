@@ -27,7 +27,14 @@ jobs:
       #  IMPORTANT:
       #  1. See the following link for information about the tools that need to be installed for Frogbot to work - https://github.com/jfrog/frogbot/tree/master/docs/templates/github-actions/scan-and-fix
       #  2. Some projects require creating a frogbot-config.yml file. Read more about it here - https://github.com/jfrog/frogbot/blob/master/docs/frogbot-config.md
+      
+      - name: Configuring PATH variable
+        run: |
+          echo "$HOME/.local/bin" >> $PATH
 
+      - name: Installing dependency
+        run: pip install pipenv
+        
       - uses: jfrog/frogbot@v2
         with:
           oidc-provider-name: jay-github
@@ -71,9 +78,4 @@ jobs:
           # need to set this value, if it is set in the frogbot-config.yml file.
           # JF_DEPS_REPO: ""
           JF_PROJECT: 'umac-project'
-      - name: Configuring PATH variable
-        run: |
-          echo "$HOME/.local/bin" >> $PATH
 
-      - name: Installing dependency
-        run: pip install pipenv
