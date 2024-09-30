@@ -1,2 +1,5 @@
 Flask==2.3.2
 gunicorn==22.0.0
+PyYAML>3.11
+nltk
+redis == 4.6.0
