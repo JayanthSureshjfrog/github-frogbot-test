@@ -3,5 +3,4 @@ gunicorn==22.0.0
 PyYAML>3.11
 nltk
 redis == 4.6.0
-urllib3 == 1.25.7
-beautifultext
+
