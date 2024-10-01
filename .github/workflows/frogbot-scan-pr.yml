@@ -19,7 +19,7 @@ permissions:
   id-token: write
 jobs:
   scan-pull-request:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # A pull request needs to be approved, before Frogbot scans it. Any GitHub user who is associated with the
     # "frogbot" GitHub environment can approve the pull request to be scanned.
     # Read more here (Install Frogbot Using GitHub Actions): https://github.com/jfrog/frogbot/blob/master/docs/install-github.md
@@ -28,7 +28,14 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
+   
+     # Install prerequisites
+      - name: Set up Python
+        uses: actions/setup-python@v5 
+        with:
+          python-version: '3.12'
+      - run: pip install pipenv
+      
       #  IMPORTANT:
       #  1. See the following link for information about the tools that need to be installed for Frogbot to work - https://github.com/jfrog/frogbot/tree/master/docs/templates/github-actions/scan-and-fix
       #  2. Some projects require creating a frogbot-config.yml file. Read more about it here - https://github.com/jfrog/frogbot/blob/master/docs/frogbot-config.md
