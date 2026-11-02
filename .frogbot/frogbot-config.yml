@@ -2,4 +2,9 @@
     git:
       branches:
         - main
-      
+      aggregateFixes: true
+    scan:
+      failOnSecurityIssues: true
+      projects:
+        - workingDirs:
+            - python
