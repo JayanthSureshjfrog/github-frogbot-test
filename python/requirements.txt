@@ -3,4 +3,5 @@ gunicorn==22.0.0
 PyYAML>3.11
 nltk
 redis == 4.6.0
+deepdiff==8.0.0
 
